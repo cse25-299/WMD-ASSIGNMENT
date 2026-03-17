@@ -5,18 +5,21 @@ body {
 /* HERO SECTION */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('../images/bmw.jpg') no-repeat center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url('../images/bmw-bg.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
-  margin-top: 80px;
+  position: relative;
+  z-index: 2;
 }
-
 /* CTA SECTION */
 .cta {
   background: #003366;
