@@ -13,7 +13,7 @@
 
 <!-- NAVBAR -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">BMW</a>
   
@@ -35,30 +35,51 @@
 </header>
 
 <!-- HERO -->
-<section class="hero text-center text-white d-flex align-items-center">
-  <div class="hero-content text-center text-white">
-    <h1 class="display-4">Welcome to BMW</h1>
-    <p class="lead">The Ultimate Driving Machine</p>
-    <a href="models.html" class="btn btn-primary mt-3">Explore Models</a>
+<section class="hero d-flex align-items-center justify-content-center text-center text-white">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 class="display-3 fw-bold">Experience BMW</h1>
+    <p class="lead">Luxury. Performance. Innovation.</p>
+    <a href="models.html" class="btn btn-primary btn-lg mt-3">Explore Models</a>
   </div>
 </section>
 
 <!-- ABOUT PREVIEW -->
 <section class="container mt-5 pt-5 text-center">
-  <h2>About BMW</h2>
-  <p>BMW is a world-leading manufacturer of luxury vehicles known for performance, innovation, and design excellence.</p>
+  <h2 class="fw-bold">About BMW</h2>
+  <p class="text-muted">
+    BMW is a global leader in premium automobiles, delivering unmatched driving pleasure through cutting-edge technology and iconic design.
+  </p>
   <a href="about.html" class="btn btn-outline-dark">Read More</a>
 </section>
 
-<!-- MODELS SECTION -->
+<!-- FEATURES -->
 <section class="container mt-5">
-  <h2 class="text-center mb-4">Featured Models</h2>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <h4>⚡ Performance</h4>
+      <p>Powerful engines designed for speed and efficiency.</p>
+    </div>
+    <div class="col-md-4">
+      <h4>💡 Innovation</h4>
+      <p>Advanced technology for smarter driving experiences.</p>
+    </div>
+    <div class="col-md-4">
+      <h4>🎯 Precision</h4>
+      <p>German engineering built for perfection and control.</p>
+    </div>
+  </div>
+</section>
 
-  <div class="row">
+<!-- MODELS -->
+<section class="container mt-5">
+  <h2 class="text-center mb-4 fw-bold">Featured Models</h2>
+
+  <div class="row g-4">
 
     <div class="col-md-4">
-      <div class="card">
-        <img src="images/x5.jpg" class="card-img-top" alt="BMW X5" height="200">
+      <div class="card shadow-sm h-100">
+        <img src="images/x5.jpg" class="card-img-top" alt="BMW X5">
         <div class="card-body">
           <h5 class="card-title">BMW X5</h5>
           <p>Luxury SUV with advanced technology.</p>
@@ -67,8 +88,8 @@
     </div>
 
     <div class="col-md-4">
-      <div class="card">
-        <img src="images/m4.jpg" class="card-img-top" alt="BMW M4" height="200">
+      <div class="card shadow-sm h-100">
+        <img src="images/m4.jpg" class="card-img-top" alt="BMW M4">
         <div class="card-body">
           <h5 class="card-title">BMW M4</h5>
           <p>High-performance sports coupe.</p>
@@ -77,8 +98,8 @@
     </div>
 
     <div class="col-md-4">
-      <div class="card">
-        <img src="images/i8.jpg" class="card-img-top" alt="BMW i8" height="200">
+      <div class="card shadow-sm h-100">
+        <img src="images/i8.jpg" class="card-img-top" alt="BMW i8">
         <div class="card-body">
           <h5 class="card-title">BMW i8</h5>
           <p>Futuristic hybrid sports car.</p>
@@ -89,34 +110,41 @@
   </div>
 </section>
 
-<!-- CALL TO ACTION -->
+<!-- CTA -->
 <section class="cta text-center text-white mt-5 p-5">
-  <h2>Ready to Drive?</h2>
-  <p>Contact us today to book your test drive.</p>
-  <a href="contact.html" class="btn btn-light">Contact Us</a>
+  <h2 class="fw-bold">Ready to Drive?</h2>
+  <p>Book your BMW experience today.</p>
+  <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3">
+<footer class="bg-dark text-white pt-4">
   <div class="container">
-    <div class="row">
+    <div class="row text-center text-md-start">
 
-    <div class="col-md-3">
-      <h6>Quick Links</h6>
-      <ul class="list-unstyled">
-        <li><a href="#about" class="text-white">About</a></li>
-        <li><a href="#skills" class="text-white">Skills</a></li>
-        <li><a href="#projects" class="text-white">Projects</a></li>
-      </ul>
+      <div class="col-md-4">
+        <h5>BMW</h5>
+        <p>The Ultimate Driving Machine.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="about.html" class="text-white">About</a></li>
+          <li><a href="models.html" class="text-white">Models</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p>Email: bmwdealerbw@email.com</p>
+        <p>Phone: +267 78 451 700</p>
+      </div>
+
     </div>
 
-    <div class="col-md-3">
-      <h6>Contact</h6>
-      <p>Email: bmwdealerbw@email.com</p>
-      <p>Phone: +267 78 451 700</p>
-    </div>
-
-    <div>
+    <div class="text-center mt-3 border-top pt-3">
       <p>&copy; 2026 BMW Website | Designed by You</p>
     </div>
   </div>
