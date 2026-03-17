@@ -2,16 +2,36 @@ body {
   font-family: Arial;
 }
 
+/* HERO SECTION */
 .hero {
+  height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://i.pinimg.com/736x/9c/42/db/9c42db16d908e803ff4342842aa069d4.jpg');
+              url('../images/bmw.jpg') no-repeat center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h1, h2 {
-  color: #003366;
+.hero-content {
+  margin-top: 80px;
 }
 
-nav a {
-  margin: 10px;
+/* CTA SECTION */
+.cta {
+  background: #003366;
+}
+
+/* CARDS */
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* NAVBAR SPACING FIX */
+body {
+  padding-top: 70px;
 }
