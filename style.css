@@ -3,12 +3,9 @@ body {
 }
 
 .hero {
-  background: url('../images/bmw.jpg') no-repeat center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://i.pinimg.com/736x/9c/42/db/9c42db16d908e803ff4342842aa069d4.jpg');
   background-size: cover;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 h1, h2 {
