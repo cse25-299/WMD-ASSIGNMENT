@@ -9,8 +9,25 @@
 
 <body>
 
-<nav class="navbar navbar-dark bg-black p-3">
-  <a href="index.html" class="navbar-brand">BMW</a>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">BMW</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li><a class="nav-link active" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="models.html">Models</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <div class="container mt-5">
@@ -28,6 +45,11 @@
     </div>
   </div>
 </div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+  <p>&copy; 2026 BMW Website | Designed by You</p>
+</footer>
 
 </body>
 </html>
