@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Feedback</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
+<body>
+
+<nav class="navbar navbar-dark bg-black p-3">
+  <a href="index.html" class="navbar-brand">BMW</a>
+</nav>
+
+<div class="container mt-5">
+  <h1 class="text-center">Feedback Form</h1>
+
+  <form class="mt-4">
+
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Rating</label>
+      <select class="form-control" required>
+        <option value="">Select</option>
+        <option>Excellent</option>
+        <option>Good</option>
+        <option>Average</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label>Message</label>
+      <textarea class="form-control" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-dark">Submit</button>
+
+  </form>
+</div>
+
+</body>
+</html>
