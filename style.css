@@ -1,5 +1,36 @@
+/* GLOBAL THEME */
+:root {
+  --main-dark: #0b0b0b;
+  --soft-dark: #1a1a1a;
+  --white: #ffffff;
+  --silver: #c0c0c0;
+  --blue-accent: #0d6efd;
+}
+
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  background-color: var(--main-dark);
+  color: var(--white);
+  padding-top: 70px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #000000 !important;
+}
+
+.navbar-brand {
+  color: var(--white) !important;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: var(--silver) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--blue-accent) !important;
 }
 
 /* HERO SECTION */
@@ -13,30 +44,93 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
 }
-/* CTA SECTION */
-.cta {
-  background: #003366;
+
+.hero h1 {
+  color: var(--white);
+}
+
+.hero p {
+  color: var(--silver);
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-dark {
+  background-color: var(--blue-accent);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+}
+
+.btn-primary:hover,
+.btn-dark:hover {
+  background-color: #084298;
+}
+
+/* ABOUT / TEXT */
+h1, h2, h3, h4, h5 {
+  color: var(--white);
+}
+
+p,
+.text-muted {
+  color: var(--silver) !important;
 }
 
 /* CARDS */
 .card {
+  background-color: var(--soft-dark);
+  color: var(--white);
+  border: 1px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
 }
 
-/* NAVBAR SPACING FIX */
-body {
-  padding-top: 70px;
+.card img {
+  height: 250px;
+  object-fit: cover;
 }
 
-STYLE
+.card-title {
+  color: var(--white);
+}
+
+.card-text {
+  color: var(--silver);
+}
+
+/* CTA SECTION */
+.cta {
+  background: linear-gradient(135deg, #000000, #003366);
+}
+
+/* FOOTER */
+footer {
+  background-color: #000000 !important;
+}
+
+footer h5 {
+  color: var(--white);
+}
+
+footer p,
+footer a {
+  color: var(--silver) !important;
+}
+
+footer a:hover {
+  color: var(--blue-accent) !important;
+}
