@@ -112,6 +112,26 @@ p,
   color: var(--silver);
 }
 
+/* CENTRALIZE PRICE AND ADD TO CART BUTTON */
+.card-body {
+  text-align: center;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffc107;
+  margin: 10px 0;
+}
+
+.add-cart-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+
 /* CTA SECTION */
 .cta {
   background: linear-gradient(135deg, #000000, #003366);
