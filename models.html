@@ -2,14 +2,76 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BMW Models</title>
+<title>MMUSI DEALERSHIP | Models</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="css/style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  padding-top: 80px;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.card {
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-top,
+.card img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffc107;
+  text-align: center;
+}
+
+.add-cart-btn {
+  display: block;
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+.cart-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.checkout-form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">MMUSI DEALERSHIP</a>
@@ -18,10 +80,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="nav-link" href="#">
-      Cart 🛒 <span id="cart-count">0</span>
-    </a>
-
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li><a class="nav-link active" href="index.html">Home</a></li>
@@ -29,173 +87,261 @@
         <li><a class="nav-link" href="models.html">Models</a></li>
         <li><a class="nav-link" href="contact.html">Contact</a></li>
         <li><a class="nav-link" href="feedback.html">Feedback</a></li>
+        <li>
+          <a class="nav-link" href="#cart-section">
+            Cart 🛒 <span id="cart-count">0</span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
 <section class="container mt-5">
-  <h2 class="text-center fw-bold mb-4">BMW Performance Models</h2>  
-    <div class="container mt-5">
-    
-      <div class="row mt-4">
-    
-        <div class="col-md-4">
-          <div class="card">
-            <img src="MODELS/M1.jpg" class="card-img-top" alt="BMW M1">
-            <div class="card-body">
-              <p class="card-text">
-                A compact hot hatch with a turbocharged inline-6 engine, offering thrilling speed and everyday practicality.
-              </p>
-              <ul>
-                <li><strong>Engine:</strong> 3.0L Turbo Inline-6</li>
-                <li><strong>Power:</strong> 335 hp</li>
-                <li><strong>0–100 km/h:</strong> 4.6 sec</li>
-                
-              <p class="price">P 950,000</p>
-            
-              <button class="btn btn-warning add-cart-btn">
-                Add to Cart
-              </button>
-              </ul>
-            </div>
-          </div>
+  <h2 class="text-center fw-bold mb-4">BMW Performance Models</h2>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="MODELS/M1.jpg" class="card-img-top" alt="BMW M1">
+        <div class="card-body">
+          <h5 class="card-title text-center">BMW M1</h5>
+          <p>A compact hot hatch with a turbocharged inline-6 engine.</p>
+          <ul>
+            <li><strong>Engine:</strong> 3.0L Turbo Inline-6</li>
+            <li><strong>Power:</strong> 335 hp</li>
+            <li><strong>0–100 km/h:</strong> 4.6 sec</li>
+          </ul>
+          <p class="price">P 950000</p>
+          <button class="btn btn-warning add-cart-btn" data-name="BMW M1" data-price="950000">Add to Cart</button>
         </div>
-    
-        <div class="col-md-4">
-          <div class="card">
-            <img src="MODELS/M2.jpg" class="card-img-top" alt="BMW M2">
-            <div class="card-body">
-              <h5 class="card-title">BMW M2</h5>
-              <p class="card-text">
-                A compact performance coupe with aggressive styling and precise handling for pure driving enjoyment.
-              </p>
-              <ul>
-                <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
-                <li><strong>Power:</strong> 453 hp</li>
-                <li><strong>0–100 km/h:</strong> 4.1 sec</li>
-
-                <p class="price">P 950,000</p>
-
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
-              </ul>
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-md-4">
-          <div class="card">
-            <img src="MODELS/M3.jpg" class="card-img-top" alt="BMW M3">
-            <div class="card-body">
-              <h5 class="card-title">BMW M3</h5>
-              <p class="card-text">
-                A high-performance sports sedan combining luxury, technology, and track-ready power.
-              </p>
-              <ul>
-                <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
-                <li><strong>Power:</strong> 473–503 hp</li>
-                <li><strong>0–100 km/h:</strong> 3.9 sec</li>
-
-                <p class="price">P 950,000</p>
-
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
-              </ul>
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-md-4" id="m4">
-          <div class="card">
-            <img src="MODELS/M4.jpg" class="card-img-top" alt="BMW M4">
-            <div class="card-body">
-              <h5 class="card-title">BMW M4</h5>
-              <p class="card-text">
-                A sporty coupe with bold design, high speed, and exceptional driving dynamics.
-              </p>
-              <ul>
-                <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
-                <li><strong>Power:</strong> 473–503 hp</li>
-                <li><strong>0–100 km/h:</strong> 3.8 sec</li>
-
-                <p class="price">P 950,000</p>
-
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
-              </ul>
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-md-4" id="m5cs">
-          <div class="card">
-            <img src="MODELS/M5.jpg" class="card-img-top" alt="BMW M5">
-            <div class="card-body">
-              <h5 class="card-title">BMW M5CS</h5>
-              <p class="card-text">
-                A luxury super sedan with extreme power, advanced AWD, and everyday comfort.
-              </p>
-              <ul>
-                <li><strong>Engine:</strong> 4.4L Twin-Turbo V8</li>
-                <li><strong>Power:</strong> 617 hp</li>
-                <li><strong>0–100 km/h:</strong> 3.3 sec</li>
-
-                <p class="price">P 950,000</p>
-
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
-              </ul>
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-md-4" id="x5m">
-          <div class="card">
-            <img src="MODELS/X5M.jpg" alt="BMW X5M">
-            <div class="card-body">
-              <h5 class="card-title">BMW X5M</h5>
-              <p class="card-text">
-                A high-performance SUV delivering power, luxury, and everyday practicality.
-              </p>
-              <ul>
-                <li><strong>Engine:</strong> 4.4L Twin-Turbo V8</li>
-                <li><strong>Power:</strong> 617 hp</li>
-                <li><strong>0–100 km/h:</strong> 3.8 sec</li>
-
-                <p class="price">P 950,000</p>
-
-                <button class="btn btn-warning add-cart-btn">
-                  Add to Cart
-                </button>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-    
+      </div>
     </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="MODELS/M2.jpg" class="card-img-top" alt="BMW M2">
+        <div class="card-body">
+          <h5 class="card-title text-center">BMW M2</h5>
+          <p>A compact performance coupe with aggressive styling.</p>
+          <ul>
+            <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
+            <li><strong>Power:</strong> 453 hp</li>
+            <li><strong>0–100 km/h:</strong> 4.1 sec</li>
+          </ul>
+          <p class="price">P 950000</p>
+          <button class="btn btn-warning add-cart-btn" data-name="BMW M2" data-price="950000">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="MODELS/M3.jpg" class="card-img-top" alt="BMW M3">
+        <div class="card-body">
+          <h5 class="card-title text-center">BMW M3</h5>
+          <p>A high-performance sports sedan with luxury and power.</p>
+          <ul>
+            <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
+            <li><strong>Power:</strong> 473–503 hp</li>
+            <li><strong>0–100 km/h:</strong> 3.9 sec</li>
+          </ul>
+          <p class="price">P 950000</p>
+          <button class="btn btn-warning add-cart-btn" data-name="BMW M3" data-price="950000">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="MODELS/M4.jpg" class="card-img-top" alt="BMW M4">
+        <div class="card-body">
+          <h5 class="card-title text-center">BMW M4</h5>
+          <p>A sporty coupe with bold design and high speed.</p>
+          <ul>
+            <li><strong>Engine:</strong> 3.0L Twin-Turbo Inline-6</li>
+            <li><strong>Power:</strong> 473–503 hp</li>
+            <li><strong>0–100 km/h:</strong> 3.8 sec</li>
+          </ul>
+          <p class="price">P 950000</p>
+          <button class="btn btn-warning add-cart-btn" data-name="BMW M4" data-price="950000">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="MODELS/M5.jpg" class="card-img-top" alt="BMW M5CS">
+        <div class="card-body">
+          <h5 class="card-title text-center">BMW M5CS</h5>
+          <p>A luxury super sedan with extreme power.</p>
+          <ul>
+            <li><strong>Engine:</strong> 4.4L Twin-Turbo V8</li>
+            <li><strong>Power:</strong> 617 hp</li>
+            <li><strong>0–100 km/h:</strong> 3.3 sec</li>
+          </ul>
+          <p class="price">P 950000</p>
+          <button class="btn btn-warning add-cart-btn" data-name="BMW M5CS" data-price="950000">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="MODELS/X5M.jpg" class="card-img-top" alt="BMW X5M">
+        <div class="card-body">
+          <h5 class="card-title text-center">BMW X5M</h5>
+          <p>A high-performance SUV with power and luxury.</p>
+          <ul>
+            <li><strong>Engine:</strong> 4.4L Twin-Turbo V8</li>
+            <li><strong>Power:</strong> 617 hp</li>
+            <li><strong>0–100 km/h:</strong> 3.8 sec</li>
+          </ul>
+          <p class="price">P 950000</p>
+          <button class="btn btn-warning add-cart-btn" data-name="BMW X5M" data-price="950000">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-  <script>
-  let cartCount = 0;
+<section class="container" id="cart-section">
+  <div class="cart-box">
+    <h3 class="fw-bold">Shopping Cart</h3>
 
-  const buttons = document.querySelectorAll(".add-cart-btn");
-  const cartDisplay = document.getElementById("cart-count");
+    <div id="cart-items">
+      <p>Your cart is empty.</p>
+    </div>
 
-  buttons.forEach(button => {
-    button.addEventListener("click", function () {
-      cartCount++;
-      cartDisplay.textContent = cartCount;
-      alert("Car added to cart!");
+    <h4 class="mt-3">Total: P <span id="cart-total">0</span></h4>
+  </div>
+</section>
+
+<section class="container">
+  <div class="checkout-form">
+    <h3 class="fw-bold">Checkout</h3>
+
+    <form id="checkoutForm">
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="text" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Delivery Address</label>
+        <textarea class="form-control" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Payment Method</label>
+        <select class="form-control" required>
+          <option value="">Select payment method</option>
+          <option>Cash Payment</option>
+          <option>Bank Transfer</option>
+          <option>Card Payment</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-dark w-100">
+        Complete Checkout
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  @ 2026 MMUSI DEALERSHIP | Privacy Policy
+</footer>
+
+<script>
+let cart = [];
+
+const buttons = document.querySelectorAll(".add-cart-btn");
+const cartCount = document.getElementById("cart-count");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const checkoutForm = document.getElementById("checkoutForm");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function () {
+    const name = this.getAttribute("data-name");
+    const price = Number(this.getAttribute("data-price"));
+
+    cart.push({
+      name: name,
+      price: price
     });
+
+    updateCart();
   });
+});
+
+function updateCart() {
+  cartCount.textContent = cart.length;
+  cartItems.innerHTML = "";
+
+  let total = 0;
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = "<p>Your cart is empty.</p>";
+    cartTotal.textContent = "0";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    total += item.price;
+
+    cartItems.innerHTML += `
+      <div class="cart-item">
+        <div>
+          <strong>${item.name}</strong><br>
+          P ${item.price}
+        </div>
+
+        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
+          Remove
+        </button>
+      </div>
+    `;
+  });
+
+  cartTotal.textContent = total;
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+checkoutForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (cart.length === 0) {
+    alert("Your cart is empty. Please add a car first.");
+    return;
+  }
+
+  alert("Checkout complete! Thank you for shopping with MMUSI DEALERSHIP.");
+
+  cart = [];
+  updateCart();
+  checkoutForm.reset();
+});
 </script>
-  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
