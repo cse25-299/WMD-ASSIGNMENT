@@ -181,5 +181,21 @@
     </div>
   </div>
 </section>
+
+  <script>
+  let cartCount = 0;
+
+  const buttons = document.querySelectorAll(".add-cart-btn");
+  const cartDisplay = document.getElementById("cart-count");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      cartCount++;
+      cartDisplay.textContent = cartCount;
+      alert("Car added to cart!");
+    });
+  });
+</script>
+  
 </body>
 </html>
